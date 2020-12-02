@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "420676189978",
+    "firebase_url": "https://auto123-20c54.firebaseio.com",
+    "project_id": "auto123-20c54",
+    "storage_bucket": "auto123-20c54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420676189978:android:9912ed08d97e593206f6a3",
+        "android_client_info": {
+          "package_name": "com.mslive.msapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420676189978-7k1igvcc7ghq2lo91mcg0u0ejm3k9t1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZH8x6X2ZB4QUohRWxk3AMmbAg0atmy7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420676189978-7k1igvcc7ghq2lo91mcg0u0ejm3k9t1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420676189978:android:4ff57840c793c58906f6a3",
+        "android_client_info": {
+          "package_name": "com.rethink.aeyauto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420676189978-7k1igvcc7ghq2lo91mcg0u0ejm3k9t1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZH8x6X2ZB4QUohRWxk3AMmbAg0atmy7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420676189978-7k1igvcc7ghq2lo91mcg0u0ejm3k9t1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420676189978:android:7786c9976f60373606f6a3",
+        "android_client_info": {
+          "package_name": "com.rethink.rethinkc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420676189978-7k1igvcc7ghq2lo91mcg0u0ejm3k9t1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZH8x6X2ZB4QUohRWxk3AMmbAg0atmy7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420676189978-7k1igvcc7ghq2lo91mcg0u0ejm3k9t1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

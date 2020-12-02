@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ms app</string>
+    <string name="xlr8_learning">xlr8 learning</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="appbar_scrolling_view_behavior">scroll</string>
+
+
+    <string name="ob_header1">Ethnic Styles</string>
+    <string name="ob_header2">Comfort First</string>
+    <string name="ob_header3">Personalised</string>
+
+    <string name="ob_get_started">Get Started</string>
+
+    <string name="ob_desc1"> </string>
+    <string name="ob_desc2"> </string>
+    <string name="ob_desc3"> </string>
+    <string name="home">Home</string>
+    <string name="title_activity_login2">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+
+</resources>

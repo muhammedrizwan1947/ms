@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:layout_marginBottom="20dp"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/root_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+android:paddingHorizontal="20dp"        >
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_name"
+        android:layout_marginTop="15dp"
+        android:textColor="#000"
+        android:fontFamily="@font/robotor"
+        android:textSize="22sp"
+        android:text="name"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_address"
+        android:textColor="#000"
+        android:fontFamily="@font/robotor"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:text="addressaddress"/>
+
+
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_phone"
+        android:layout_marginTop="8dp"
+        android:textColor="#000"
+        android:fontFamily="@font/robotor"
+
+
+        android:text="999999999"
+        android:layout_marginBottom="15dp"/>
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
