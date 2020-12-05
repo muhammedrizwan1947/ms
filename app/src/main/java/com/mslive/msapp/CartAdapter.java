@@ -33,8 +33,10 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ImageViewHolde
    // private OnItemClickListener mListener;
     private interfacex Interfacex;
 
-    int total;
-    int i=0;
+
+
+    int total=0;
+    int i=1;
 
 
 
@@ -44,6 +46,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ImageViewHolde
         Interfacex=interfacexx;
 
 
+
+
     }
 
     @NonNull
@@ -51,6 +55,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ImageViewHolde
     public ImageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View v= LayoutInflater.from(mContext).inflate(R.layout.cart_item_3,parent,false);
+
+
         return new ImageViewHolder(v);
     }
 
@@ -83,19 +89,31 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ImageViewHolde
 
                int op=Integer.parseInt(productprice);
 
-              // total=total+op;
+
+              //  Toast.makeText(mContext, productprice, Toast.LENGTH_SHORT).show();
+
+               //total=total+op;
+
+
+
 
 
 
                if (i<getItemCount()) {
                    total += Integer.parseInt(productprice);
+                   i++;
+
+                  // Toast.makeText(mContext, i+"g"+getItemCount(), Toast.LENGTH_SHORT).show();
+
                }
+
                else {
-                   Intent intent=new Intent(mContext,CartActivity.class);
-                   //intent.putExtra("total",Integer.toString(total));
-                   intent.putExtra("total","abcd");
-                   mContext.startActivity(intent);
+
+                   total += Integer.parseInt(productprice);
+                   Toast.makeText(mContext,Integer.toString(total) , Toast.LENGTH_SHORT).show();
+                   Interfacex.setT(Integer.toString(total));
                }
+
 
 
 
@@ -148,7 +166,14 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ImageViewHolde
         return mUploads.size();
     }
 
+
+
+
     public class ImageViewHolder extends RecyclerView.ViewHolder {
+
+
+
+
 
 
         public TextView productName, productPrice,tt;

@@ -2,11 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
    >
     <ImageView
-        android:layout_margin="10dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="12dp"
         android:id="@+id/product_image_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

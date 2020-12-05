@@ -13,6 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -52,15 +53,18 @@ public class CartActivity extends AppCompatActivity implements interfacex{
     String date,subject;
 
     int k;
+    int i=0;
 
     private List<Cartmodel> mUploads;
     EditText editText1,editText2;
     Button button;
 
     String totalprice="none";
-    int totalp;
+    int totalp=0;
 
     TextView total;
+
+
 
     int selectedQuantity=0;
 
@@ -147,12 +151,14 @@ public class CartActivity extends AppCompatActivity implements interfacex{
         mAdapter = new CartAdapter(CartActivity.this,mUploads,this);
         mRecyclerView.setAdapter(mAdapter);
 
-      //  mAdapter.setOnItemClickListener(CartActivity.this);
 
-        Toast.makeText(this, totalprice, Toast.LENGTH_SHORT).show();
 
 
         mDatabaseRef =  FirebaseDatabase.getInstance().getReference().child("cart").child(firebaseUser.getUid());
+
+
+
+
 
 
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
@@ -165,20 +171,79 @@ public class CartActivity extends AppCompatActivity implements interfacex{
                     for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                         Cartmodel upload = postSnapshot.getValue(Cartmodel.class);
 
+
+
                         //to get key for onclick
                         //must be above mUploads.add(upload);
+
+
+                        DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference().child("productdetails").child(upload.getProductid());
 
                         upload.setId(postSnapshot.getKey());
                         mUploads.add(upload);
 
 
-                        totalprice=getIntent().getStringExtra("total");
-                        Toast.makeText(CartActivity.this, totalprice, Toast.LENGTH_SHORT).show();
+
+
+                        //if (i<mAdapter.getItemCount()) {
+
+                        while (i<mAdapter.getItemCount()){
+
+
+
+
+                            databaseReference.child("productprice").addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    totalprice=(snapshot.getValue().toString());
+
+                                    totalp = totalp + Integer.parseInt(totalprice);
+                                    Log.d("iota",Integer.toString(i));
+
+                                    Log.d("qwer",Integer.toString(totalp));
+
+
+                                        total.setText(String.valueOf(totalp));
+
+
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
+
+
+
+
+                            i++;
+
+
+                        }
+
+
+                        Log.d("total",Integer.toString(totalp));
+
+
+
+
+
+
+
+
+
+
+
 
 
                     }
 
+
+
+
                     mAdapter.notifyDataSetChanged();
+
 
                 }
                 else {
@@ -224,10 +289,15 @@ public class CartActivity extends AppCompatActivity implements interfacex{
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(CartActivity.this, "scss", Toast.LENGTH_SHORT).show();
+
                     }
                 });
             }
         });
+
+
+        Toast.makeText(this, String.valueOf(totalp), Toast.LENGTH_SHORT).show();
+        Log.d("asdf",String.valueOf(totalp));
 
 
 
@@ -247,6 +317,10 @@ public class CartActivity extends AppCompatActivity implements interfacex{
 
     }
 
+
+
+
+
     @Override
     public void onclick2(int position) {
         Toast.makeText(this, "p"+position + "q\t" + selectedKey, Toast.LENGTH_SHORT).show();
@@ -262,16 +336,13 @@ public class CartActivity extends AppCompatActivity implements interfacex{
 
     }
 
-
-
-
-
-
     @Override
-    protected void onStart() {
-        super.onStart();
-
+    public void setT(String text) {
+        total.setText(text);
     }
+
+
+
 
 
 }
